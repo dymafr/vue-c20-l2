@@ -15,8 +15,12 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useTodos } from './stores/todoStore';
 
 const input = ref<string>('');
+
+const todoStore = useTodos();
+console.log(todoStore.todos);
 </script>
 
 <style lang="scss">
