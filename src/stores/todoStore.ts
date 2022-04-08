@@ -1,11 +1,12 @@
 import { defineStore } from 'pinia';
+import { Todo } from '../interfaces/todo.interface';
 
 interface TodoState {
-  
+  todos: Todo[];
 }
 
 export const useTodos = defineStore('todos', {
-  state: () => ({
+  state: (): TodoState => ({
     todos: [],
   }),
 });
